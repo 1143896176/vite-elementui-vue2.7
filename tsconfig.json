@@ -1,18 +1,39 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "baseUrl": ".",
+    "target": "ES6",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "strict": true,
+    "strict": false,
+    "sourceMap": true,
+    "allowJs": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "noEmit": true
+    "incremental": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "types": ["vite/client", "vite-plugin-pages/client"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "auto-imports.d.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules"],
+  "vueCompilerOptions": {
+    "target": 2.7
+  }
 }
