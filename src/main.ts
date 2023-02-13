@@ -1,5 +1,5 @@
 import Vue  from 'vue'
-import './style.css'
+import './style.scss'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Element from 'element-ui'
